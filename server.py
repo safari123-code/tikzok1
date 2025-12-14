@@ -91,10 +91,6 @@ def compte():
 
 # ================= RUN =================
 
-@app.route("/compte")
-def login():
-    return render_template("login.html")
-
 import os
 
 if __name__ == "__main__":
