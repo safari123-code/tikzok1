@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0e1621;
+    color: white;
+    margin: 0;
+}
+
+.menu {
+    background: #111111;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ff0000;
+}
+
+.content {
+    padding: 20px;
+}
+
+.btn {
+    background: #00ff99;
+    color: oklab(0% 0 0 / 0.518);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.lang{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.lang select{
+  padding:6px 10px;
+  border-radius:8px;
+  border:1px solid #333;
+  background:#111111;
+  color:white;
+}
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tikzok</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav class="menu">
+    <a href="/">{{ t("home") }}</a>
+    <a href="/recharge">{{ t("recharge") }}</a>
+    <a href="/historique">{{ t("history") }}</a>
+    <a href="/compte">{{ t("account") }}</a>
+
+    <select onchange="location.href=this.value">
+        {% for code, name in langs %}
+        <option value="/set-lang/{{ code }}" {% if code == current_lang %}selected{% endif %}>
+            {{ name }}
+        </option>
+        {% endfor %}
+    </select>
+</nav>
+
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

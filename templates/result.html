@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="container herogrid">
+    <div class="card">
+      <h1>Résumé</h1>
+      <p>Voici ce que tu as envoyé :</p>
+
+      <div class="badges" style="margin-top:12px;">
+        <div class="badge">Pays: <b>{{ country }}</b></div>
+        <div class="badge">Numéro: <b>{{ phone }}</b></div>
+        <div class="badge">Opérateur: <b>{{ operator or "—" }}</b></div>
+        <div class="badge">Montant: <b>{{ amount }} €</b></div>
+      </div>
+
+      <div class="actions" style="margin-top:16px;">
+        <a class="btn primary" href="/recharge">Nouvelle recharge</a>
+        <a class="btn" href="/">Accueil</a>
+      </div>
+    </div>
+
+    <div class="card card2">
+      <h1 style="font-size:22px;margin-bottom:10px;">Prochaine étape</h1>
+      <p>On remplace ce résumé par :</p>
+      <div class="badges">
+        <div class="badge">1) Créer paiement SumUp</div>
+        <div class="badge">2) Confirmer paiement</div>
+        <div class="badge">3) Envoyer recharge Reloadly</div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

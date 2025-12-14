@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="container herogrid">
+    <div class="card">
+      <h1>Connexion</h1>
+      <p>Connecte-toi pour accéder à la page Recharge.</p>
+
+      <form class="form" method="POST">
+        <div class="field">
+          <label>Email</label>
+          <input name="email" type="email" placeholder="admin@site.com" required>
+        </div>
+
+        <div class="field">
+          <label>Mot de passe</label>
+          <input name="password" type="password" placeholder="123456" required>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Se connecter</button>
+          <a class="btn" href="/">Retour</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="card card2">
+      <h1 style="font-size:22px;margin-bottom:10px;">Astuce</h1>
+      <p>Pour commencer, on utilise un login simple (démo). Plus tard on met SQLite + utilisateurs.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
