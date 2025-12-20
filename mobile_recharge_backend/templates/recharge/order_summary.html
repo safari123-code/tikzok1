@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Récapitulatif</title>
+</head>
+<body>
+
+<h1>Récapitulatif de la recharge</h1>
+
+<ul>
+    <li><strong>Numéro :</strong> {{ phone_number }}</li>
+    <li><strong>Montant :</strong> {{ amount }} {{ currency }}</li>
+</ul>
+
+<form method="post">
+    <button type="submit">Confirmer et payer</button>
+</form>
+
+<a href="{{ url_for('select_amount') }}">⬅ Modifier le montant</a>
+
+</body>
+</html>
+
+<p>Numéro : {{ phone }}</p>
+<p>Montant : {{ amount }} {{ currency }}</p>
+
+<form method="post" action="{{ url_for('recharge_payment') }}">
+    <button type="submit">Payer</button>
+</form>

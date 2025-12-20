@@ -1,0 +1,10 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<h2>Recharge réussie 🎉</h2>
+
+<p>Numéro : {{ phone }}</p>
+<p>Montant : {{ amount }} {{ currency }}</p>
+
+<a href="{{ url_for('dashboard') }}">Retour au tableau de bord</a>
+{% endblock %}

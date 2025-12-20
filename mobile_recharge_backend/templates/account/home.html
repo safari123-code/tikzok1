@@ -1,0 +1,17 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<h1>Mon compte</h1>
+
+<p>Bienvenue dans votre compte 🎉</p>
+
+<ul>
+  <li><a href="{{ url_for('account_profile') }}">Profil</a></li>
+  <li><a href="{{ url_for('account_payment_methods') }}">Moyens de paiement</a></li>
+  <li><a href="{{ url_for('account_recurring_list') }}">Recharges récurrentes</a></li>
+  <li><a href="{{ url_for('account_notifications') }}">Notifications</a></li>
+  <li><a href="{{ url_for('account_settings') }}">Paramètres</a></li>
+  <li><a href="{{ url_for('account_about') }}">À propos</a></li>
+  <li><a href="{{ url_for('logout') }}">Déconnexion</a></li>
+</ul>
+{% endblock %}

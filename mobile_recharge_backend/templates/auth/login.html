@@ -1,0 +1,36 @@
+{% extends "layout/base.html" %}
+{% block title %}Connexion{% endblock %}
+
+{% block content %}
+<div class="grid grid--2" style="margin-top:18px;">
+  <section class="card">
+    <h1 class="h1">Connexion</h1>
+    <p class="muted">Connecte-toi avec ton numéro ou email.</p>
+
+    <form class="stack" method="post" action ="{{ url_for('login_post') }}" style="margin-top:14px;">
+      <div class="field">
+        <label class="muted">Email / Téléphone</label>
+        <input class="input" name="login" placeholder="+33 6 12 34 56 78" required>
+      </div>
+
+      <div class="field">
+        <label class="muted">Mot de passe</label>
+        <input class="input" type="password" name="password" placeholder="••••••••" required>
+      </div>
+
+      <button class="btn" type="submit">Se connecter</button>
+      <a class="btn btn--ghost" href="{{ url_for('register') }}">Créer un compte</a>
+    </form>
+  </section>
+
+  <aside class="card">
+    <h2 class="h2">Recharge en 30 secondes</h2>
+    <p class="muted">Choisis un contact, un montant, et paie en toute sécurité.</p>
+    <div class="stack" style="margin-top:14px;">
+      <div class="card" style="box-shadow:none;">✅ Multi-pays</div>
+      <div class="card" style="box-shadow:none;">✅ Historique & reçus</div>
+      <div class="card" style="box-shadow:none;">✅ Notifications</div>
+    </div>
+  </aside>
+</div>
+{% endblock %}

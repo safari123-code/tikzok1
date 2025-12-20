@@ -1,0 +1,31 @@
+{% extends "layout/base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="stack" style="margin-top:18px;">
+  <section class="card">
+    <h1 class="h1">Dashboard</h1>
+    <p class="muted">Bienvenue. Prête à lancer une recharge ?</p>
+
+    <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+      <a class="btn" href="{{ url_for('select_contact') }}">Nouvelle recharge</a>
+      <a class="btn btn--ghost" href="{{ url_for('history') }}">Historique</a>
+    </div>
+  </section>
+
+  <section class="grid grid--3">
+    <div class="card">
+      <h2 class="h2">Solde</h2>
+      <p class="muted">—</p>
+    </div>
+    <div class="card">
+      <h2 class="h2">Recharges</h2>
+      <p class="muted">—</p>
+    </div>
+    <div class="card">
+      <h2 class="h2">Notifications</h2>
+      <p class="muted">—</p>
+    </div>
+  </section>
+</div>
+{% endblock %}

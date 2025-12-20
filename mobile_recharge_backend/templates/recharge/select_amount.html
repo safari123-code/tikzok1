@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Choisir le montant</title>
+</head>
+<body>
+
+<h1>Choisir le montant</h1>
+
+<p>Numéro : {{ phone_number }}</p>
+
+<form method="post">
+
+    <label>Devise :</label><br>
+    <select name="currency" required>
+        <option value="EUR">Euro (€)</option>
+        <option value="USD">Dollar ($)</option>
+    </select>
+
+    <br><br>
+
+    <label>Montant :</label><br>
+    <input type="number" name="amount" min="1" required>
+
+    <br><br>
+
+    <button type="submit">Continuer</button>
+
+</form>
+
+</body>
+</html>

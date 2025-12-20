@@ -1,0 +1,21 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<h1>Mon compte</h1>
+
+<ul>
+  <li><a href="/account/profile">Profil</a></li>
+  <li><a href="/account/payment-methods">Moyens de paiement</a></li>
+  <li><a href="/account/recurring">Recharges récurrentes</a></li>
+  <li><a href="/account/notifications">Notifications</a></li>
+  <li><a href="/account/settings">Paramètres</a></li>
+  <li><a href="/account/about">À propos</a></li>
+  <li><a href="/logout">Déconnexion</a></li>
+  <h1>Bienvenue dans votre compte</h1>
+
+<p>Connexion réussie 🎉</p>
+
+<a href="/logout">Se déconnecter</a>
+
+</ul>
+{% endblock %}

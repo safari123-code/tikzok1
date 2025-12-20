@@ -1,0 +1,12 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<h2>Paiement</h2>
+
+<p>Numéro : {{ phone }}</p>
+<p>Montant : {{ amount }} {{ currency }}</p>
+
+<form method="post">
+    <button type="submit">Confirmer le paiement</button>
+</form>
+{% endblock %}

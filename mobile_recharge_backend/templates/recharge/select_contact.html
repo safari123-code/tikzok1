@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Choisir un contact</title>
+</head>
+<body>
+    <h1>Choisir un contact</h1>
+
+    <form method="post">
+        <label>Numéro de téléphone :</label><br>
+        <input type="text" name="phone_number" placeholder="06xxxxxxxx" required>
+        <br><br>
+
+        <button type="submit">Continuer</button>
+    </form>
+</body>
+</html>
+
+{% extends "layout/base.html" %}
+
+{% block content %}
+<h2>Recharge – Numéro</h2>
+
+<form method="post">
+    <label>Numéro de téléphone</label>
+    <input type="text" name="phone" placeholder="Ex: 0612345678" required>
+
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+
+    <button type="submit">Continuer</button>
+</form>
+{% endblock %}
